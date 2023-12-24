@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/8427edca8f.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="dom">
+    <!-- POWERING ON PHONE -->
+    <div class="phonebody">
+        <div class="button" onmousedown="triggeron()" onmouseup="triggeroff()" onclick="trigger()"></div>
+        <div class="camera"></div>
+        <div class="homebar" id="homebar" onclick="tohome()" style="z-index: 20000000;"></div>
+        <div id="offscreen"></div>
+        <div class="cover" id="cover">
+            <div class="networkbar">
+                <p id="mtn">MTN NG</p>
+                <div class="battery">
+                    <span><svg id="svg" xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 0 640 512">
+                            <style></style>
+                            <path
+                                d="M576 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM352 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM96 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                        </svg></span>
+                    <span><svg id="svg2" xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 0 576 512">
+                            <path
+                                d="M464 160c8.8 0 16 7.2 16 16V336c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16H464zM80 96C35.8 96 0 131.8 0 176V336c0 44.2 35.8 80 80 80H464c44.2 0 80-35.8 80-80V320c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32V176c0-44.2-35.8-80-80-80H80zm368 96H96V320H448V192z" />
+                        </svg></span>
+                </div>
+            </div>
+            <div class="time" id="time"></div>
+            <p id="calenda"></p>
+            <div class="swipeup" id="swipeup" onclick="navigatetopasswordpage()">
+                <svg id="swipeupsvg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                        d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+                </svg>
+            </div>
+        </div>
+        <div class="loadpage" id="loadpage">
+            <h2><span class="s">S</span><span class="o">O</span><span class="s">F</span><span class="o">T</span><span
+                    class="s">O</span><span class="o">U</span><span class="s">C</span><span class="o">H</span></h2>
+            <div class="dot"></div>
+            <i class="fa-solid fa-code-compare fa-flip"></i>
+            <div class="powered">Powered by</div>
+            <span class="html">HTML, CSS, JAVASCRIPT</span>
+        </div>
+        <div class="passwordpage" id="passwordpage">
+            <div class="backtohome" onclick="backtocoverpage()" id="black">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <p id="wrong"></p>
+            <input type="password" class="text" id="inputpassword" readonly>
+            <div class="numbercontainer">
+                <div onclick="passwordnumber(1)">1</div>
+                <div onclick="passwordnumber(2)">2</div>
+                <div onclick="passwordnumber(3)">3</div>
+                <div onclick="passwordnumber(4)">4</div>
+                <div onclick="passwordnumber(5)">5</div>
+                <div onclick="passwordnumber(6)">6</div>
+                <div onclick="passwordnumber(7)">7</div>
+                <div onclick="passwordnumber(8)">8</div>
+                <div onclick="passwordnumber(9)">9</div>
+                <div onclick="deletecharecter()" id="delete">x</div>
+                <div onclick="passwordnumber(0)">0</div>
+                <div onclick="submit()">✔</div>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <div id="clock"></div>
+            <p id="calend"></p>
+            <input type="text" class="google" id="google" readonly>
+            <i class="fa-brands fa-google gicon"></i>
+            <i class="fa-solid fa-camera glenz" ></i>
+            <i class="fa-solid fa-microphone gmic"></i>
+            <div class="regularbar" id="regularbar">
+                <div onclick="navigatetosettingspage()">
+                    <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                    <p>sett..</p>
+                </div>
+                <div onclick="navigatetothemepage()">
+                    <i class="fa-solid fa-paint-roller" style="color: #ffffff;"></i>
+                    <p>softt..</p>
+                </div>
+                <div onclick="navigatetomusicpage()">
+                    <i class="fa-solid fa-music" style="color: #ffffff;"></i>
+                    <p>Music</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-note-sticky"></i>
+                    <p>Note..</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Call</p>
+                </div>
+            </div>
+        </div>
+        <!-- SETTINGS PAGES -->
+        <div class="settingsloading" id="settingsloading"><i class="fa-solid fa-gear fa-spin fa-2xl"></i></div>
+        <div class="settings" id="settings">
+            <div class="backtohome" onclick="backtohomepage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <div class="items" id="mobiledata" onclick="toggledata()"><i class="fa-solid fa-signal"></i>Mobile Data <div class="rolerbackground" id="rb" style="background-color: white;"><div class="roler" id="datatoggle"></div></div></div>
+            <div class="items" id="security"><i class="fa-solid fa-plane-up"></i>Network & Internet</div>
+            <div class="items" id="security"><i class="fa-brands fa-bluetooth"></i>Connected device</div>
+            <div class="items" id="security"><i class="fa-brands fa-intercom"></i>Apps & notification</div>
+            <div class="items" id="security"><i class="fa-solid fa-battery-three-quarters"></i></i>Battery</div>
+            <div class="items" id="security"><i class="fa-solid fa-display"></i>Display</div>
+            <div class="items" id="security"><i class="fa-solid fa-paint-roller"></i>Themes & lockscreen</div>
+            <div class="items" id="security"><i class="fa-solid fa-volume-high"></i></i>Sound</div>
+            <div class="items" id="security"><i class="fa-solid fa-database"></i>Storage</div>
+            <div class="items" id="security" onclick="navigatetosecuritypage()"><i class="fa-solid fa-lock"></i>Security & location</div>
+            <div class="items" id="security"><i class="fa-solid fa-user"></i>Accounts</div>
+            <div class="items" id="security"><i class="fa-solid fa-power-off fa-rotate-270"></i>Action and Gestures</div>
+            <div class="items" id="security"><i class="fa-solid fa-fingerprint"></i>Accessibility</div>
+            <div class="items" id="security"><i class="fa-brands fa-google"></i>Google</div>
+            <div class="items" id="system" onclick="navigatetosystempage()"><i class="fa-solid fa-mobile"></i>System</div>
+        </div>
+        <!-- settings security page starts -->
+        <div class="securitypage" id="securitypage">
+            <div class="backtohome" onclick="backtosettingspage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <p style="text-align: center;">Security status</p>
+            <div class="item"><i class="fa-brands fa-google-scholar"></i>Google Play Protect</div>
+            <div class="item"><i class="fa-solid fa-mobile-screen-button"></i>Security Update</div>
+            <div class="item"><i class="fa-solid fa-location-pin-lock"></i>Find My Device</div>
+            <div class="item" onclick="addpassword()">Pin</div>
+            <div class="item">Password</div>
+            <div class="item" onclick="removepassword()" id="none">None</div>
+            <div class="item"><i class="fa-solid fa-location-dot"></i>Location</div>
+            <div class="item"><i class="fa-solid fa-lock-open"></i>Device admin apps</div>
+            <div class="item"><i class="fa-solid fa-sim-card"></i>Sim card lock</div>
+            <div class="item"><i class="fa-regular fa-credit-card"></i>Encryption & credentials</div>
+            <div class="item"><i class="fa-brands fa-magento"></i>Trust agents</div>
+            <div class="item"><i class="fa-solid fa-thumbtack fa-rotate-270"></i>Screen pinning</div>
+            <div class="item"><i class="fa-solid fa-eye"></i>Apps with usage access</div>
+        </div>
+        <div class="nopassword" id="nopassword">
+            <h3>Are you sure you want to remove Your password</h3>
+            <div class="nopassbuttonscontainer" id="nopassbuttonscontainer">
+                <button onclick="remove('yes')">YES</button><button onclick="remove('no')">NO</button>
+            </div>
+        </div>
+        <div class="setpassword" id="setpassword">
+            <div class="backtohome" onclick="backtosecuritypage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <input type="password" placeholder="Input New Password" id="inputnewpassword" readonly>
+            <input type="password" placeholder="Retype New Password" id="retypenewpassword" readonly>
+            <p id="error" style="text-align: center;"></p>
+            <div class="setnumbercontainer">
+                <div onclick="setpasswordnumber(1)">1</div>
+                <div onclick="setpasswordnumber(2)">2</div>
+                <div onclick="setpasswordnumber(3)">3</div>
+                <div onclick="setpasswordnumber(4)">4</div>
+                <div onclick="setpasswordnumber(5)">5</div>
+                <div onclick="setpasswordnumber(6)">6</div>
+                <div onclick="setpasswordnumber(7)">7</div>
+                <div onclick="setpasswordnumber(8)">8</div>
+                <div onclick="setpasswordnumber(9)">9</div>
+                <div onclick="setdeletecharecter()" id="delete">x</div>
+                <div onclick="setpasswordnumber(0)">0</div>
+                <div onclick="setpasswordsubmit()" id="mark">✔</div>
+            </div>
+            <button id="saveinputpassword" onclick="savepassword()">Save</button>
+        </div>
+        <!-- settings security page ends here -->
+        <!-- settings system page starts here -->
+        <div class="systempage" id="systempage">
+            <div class="backtohome" onclick="backtosettingspage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <div>Languages & input
+                <p>Soft touch-pad</p>
+            </div>
+            <div class="dates">Date & time
+                <p id="systemdate_time"></p>
+            </div>
+            <div>Schedule power on & off
+                <p>OFF: 9:30pm</p>
+            </div>
+            <div>Backup
+                <p>off</p>
+            </div>
+            <div>User Guide</div>
+            <div>App update</div>
+            <div>System Update
+                <p>Your system is up to date</p>
+            </div>
+            <div onclick="navigatetoaboutpage()">About phone
+                <p>Soft touch model 1</p>
+            </div>
+        </div>
+        <!-- settings system page ends here -->
+        <!-- settings system about-phone page starts here -->
+        <div class="aboutphone" id="aboutphone">
+            <div class="backtohome" onclick="backtosystempage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <div>Status
+                <p>Charging, 100%</p>
+            </div>
+            <div>Device name
+                <p>soft-touch</p>
+            </div>
+            <div>
+                model
+                <p>softtouch t18</p>
+            </div>
+            <div>
+                softheme version
+                <p>soft v 3.3.0(O-P115_180978)</p>
+            </div>
+            <div>HTML version
+                <p>Html 5, Css3,</p>
+            </div>
+            <div>Html-JS security patch level
+                <p>Dec 19, 2023</p>
+            </div>
+            <div>Build number
+                <p>t18-HTy554UeuCe-O-200682687ics</p>
+            </div>
+            <div>Baseband version
+                <p>Moly.ciufueoidj.ascas.q41.fxbfx.z-/10/ri</p>
+            </div>
+            <div>Kernel version
+                <p>ykjwk8382pv.2ynquheiufoaf74-ff uenho1851.c1jkg-guiu</p>
+            </div>
+        </div>
+        <!-- SETTINGS PAGE ENDS HERE -->
+        <!-- MUSIC PAGE STARTS HERE -->
+        <div class="music" id="music">
+            <div class="backtohome" onclick="backtohomepage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <div class="headerbar">
+                <div class="mainbar">
+                    <i class="fa-solid fa-bars" style="margin-right: 10px;"></i>
+                    Libary
+                </div>
+                <div class="primarybar">
+                    <div>ALBUM</div>
+                    <div>ARTIST</div>
+                    <div style="border-bottom: medium solid grey; color: antiquewhite;">SONGS</div>
+                    <div>ADD</div>
+                    <div>VIDEO</div>
+                    <div>RECENT</div>
+                    <div>GENRES</div>
+                    <div>MINI-TRACKS</div>
+                    <div>YEAR</div>
+                    <div>COMPOSER</div>
+                </div>
+            </div>
+            <div class="songs" id="song">
+                <div onclick="audio(one)"><audio src="./Audio/05 May it not be heard.mp3" id="one"></audio>05 May it not
+                    be heard.mp3</div>
+                <div onclick="audio(two)"><audio
+                        src="./Audio/Abba-Father-2-Minister-Theophilus-Sunday-Tongues-Chants_64kbps.mp3"
+                        id="two"></audio>Abba-Father-2-Minister-Theophilus-Sunday-Tongues-Chants_64kbps.mp3</div>
+                <div onclick="audio(three)"><audio
+                        src="./Audio/Awaken Love In Me_Lawrence and Darasimi Oyor (64 kbps).mp3"
+                        id="three"></audio>Awaken Love In Me_Lawrence and Darasimi Oyor (64 kbps).mp3</div>
+                <div onclick="audio(four)"><audio src="./Audio/BOWL_OF_FIRE__LAWRENCE_OYOR.mp3"
+                        id="four"></audio>BOWL_OF_FIRE__LAWRENCE_OYOR.mp3</div>
+                <div onclick="audio(five)"><audio
+                        src="./Audio/Chants-of-Intimacy-Minister-Theophilus-Sunday-Tongues-Chants_96kbps.mp3"
+                        id="five"></audio>Chants-of-Intimacy-Minister-Theophilus-Sunday-Tongues-Chants_96kbps.mp3</div>
+                <div onclick="audio(six)"><audio
+                        src="./Audio/EAGLE'S FLIGHT(CHANT VERSION) _LAWRENCE OYOR (64 kbps).mp3"
+                        id="six"></audio>EAGLE'S FLIGHT(CHANT VERSION) _LAWRENCE OYOR (64 kbps).mp3</div>
+                <div onclick="audio(seven)"><audio
+                        src="./Audio/Ebuka_Songs_-_Calling_My_Name_Im_A_Soldier__CeeNaija.com_.mp3"
+                        id="seven"></audio>Ebuka_Songs_-_Calling_My_Name_Im_A_Soldier__CeeNaija.com_.mp3</div>
+                <div onclick="audio(eight)"><audio
+                        src="./Audio/Min.-Theophilus-Sunday-_-I-CAME-BY-PRAYERS-_-ETERNITY-IN-VIEW.mp3"
+                        id="eight"></audio>Min.-Theophilus-Sunday-_-I-CAME-BY-PRAYERS-_-ETERNITY-IN-VIEW.mp3</div>
+                <div onclick="audio(nine)"><audio src="./Audio/Jesu my Love --- Lawrence oyor(MP3_128K).mp3"
+                        id="nine"></audio>Jesu my Love --- Lawrence oyor(MP3_128K).mp3</div>
+                <div onclick="audio(ten)"><audio
+                        src="./Audio/I_Give_You_My_Heart_-_Hillsong_Worship___Delirious_(360p).mp3"
+                        id="ten"></audio>I_Give_You_My_Heart_-_Hillsong_Worship___Delirious_(360p).mp3</div>
+                <div onclick="audio(eleven)" id="lastaudio"><audio
+                        src="./Audio/LOVE By KAESTRINGS_ FEATURING FAITH FESERAN_ LAWRENCE AND DARASIMI OYOR (64 kbps).mp3"
+                        id="eleven"></audio>LOVE By KAESTRINGS_ FEATURING FAITH FESERAN_ LAWRENCE AND DARASIMI OYOR (64
+                    kbps)</div>
+            </div>
+            <audio src="" controls id="player"></audio>
+        </div>
+        <!-- MUSIC PAGE ENDS HERE -->
+        <!-- THEME PAGE STARTS HERE -->
+        <div class="themepage" id="themepage">
+            <div class="backtohome" onclick="backtohomepage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <div class="themeitem" id="wallpapers" onclick="navigatetowallpaperpage()">Wallpaper
+                <p>Change lockscreen wallpaper</p>
+            </div>
+            <div class="themeitem" onclick="navigatetofontspage()">Fonts
+                <p>Change phone fonts</p>
+            </div>
+        </div>
+        <!-- wallpaper page starts here -->
+        <div class="wallpaperpage" id="wallpaperpage">
+            <div class="backtohome" onclick="backtothemepage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+
+            <div onclick="wallpaperpicture(img1)"><img src="./images/a.jpeg" alt="" id="img1"></div>
+            <div onclick="wallpaperpicture(img2)"><img src="./images/b.jpg" alt="" id="img2"></div>
+            <div onclick="wallpaperpicture(img3)"><img src="./images/c.jpeg" alt="" id="img3"></div>
+            <div onclick="wallpaperpicture(img4)"><img src="./images/d.jpeg" alt="" id="img4"></div>
+            <div onclick="wallpaperpicture(img5)"><img src="./images/e.jpeg" alt="" id="img5"></div>
+            <div onclick="wallpaperpicture(img6)"><img src="./images/f.jpeg" alt="" id="img6"></div>
+            <div onclick="wallpaperpicture(img7)"><img src="./images/g.jpg" alt="" id="img7"></div>
+            <div onclick="wallpaperpicture(img8)"><img src="./images/h.jpeg" alt="" id="img8"></div>
+            <div onclick="wallpaperpicture(img9)"><img src="./images/i.jpg" alt="" id="img9"></div>
+            <div onclick="wallpaperpicture(img10)"><img src="./images/j.jpg" alt="" id="img10"></div>
+            <div onclick="wallpaperpicture(img11)"><img src="./images/k.jpg" alt="" id="img11"></div>
+            <div onclick="wallpaperpicture(img12)"><img src="./images/l.jpeg" alt="" id="img12"></div>
+            <div onclick="wallpaperpicture(img13)"><img src="./images/m.jpg" alt="" id="img13"></div>
+            <div onclick="wallpaperpicture(img14)"><img src="./images/n.jpg" alt="" id="img14"></div>
+            <div onclick="wallpaperpicture(img15)"><img src="./images/o.jpg" alt="" id="img15"></div>
+        </div>
+        <div class="wallpaperquestion" id="wallpaperquestion">
+            <P>Set as</P>
+            <div onclick="lockscreen()">Lockscreen Wallpaper</div>
+            <div onclick="homescreen()">Homescreen Wallpaper</div>
+        </div>
+        <!-- wallpaper page ends here -->
+        <!-- fonts page starts here -->
+        <div class="fontspage" id="fontspage">
+            <div class="backtohome" onclick="backtothemepage()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </div>
+            <div style="font-family: iekie Bong Bong;" onclick="font(bong)" id="bong">Bong Bong
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: cursive;"  onclick="font(birthday)" id="birthday">Birthday
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: fantasy;"  onclick="font(candy)" id="candy">Candy
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: 'Courier New', Courier, monospace;"  onclick="font(showers)"  id="showers">Showers
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: sans-serif;"  onclick="font(comic)"  id="comic">Comic
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: Arial, Helvetica, sans-serif;" onclick="font(cherry)"  id="cherry">Cherry
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="font(christmas)"  id="Christmas">Christmas
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" onclick="font(icecream)"  id="icecream">Ice-Cream
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" onclick="font(holiday)"  id="holiday">Holiday
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div style="font-family: monospace;" onclick="font(canvas)"  id="canvas">Canvas
+                <p>A quick brown fox jumps over the lazy dog</p>
+            </div>
+        </div>
+        <!-- THEME PAGE ENDS HERE -->
+</body>
+<script src="./index.js"></script>
+<script>
+</script>
+</html>
