@@ -1155,7 +1155,7 @@
 <body id="dom">
     <!-- POWERING ON PHONE -->
     <div class="phonebody">
-        <div class="button" onmousedown="triggeron()" onmouseup="triggeroff()"></div>
+        <div class="button" onmousedown="triggeron()" onmouseup="triggeroff()" onclick="trigger()"></div>
         <div class="camera" onclick="trigger()"></div>
         <div class="homebar" id="homebar" onclick="tohome()" style="z-index: 20000000;"></div>
         <div id="offscreen"></div>
@@ -1611,6 +1611,7 @@
     }
 
     function trigger() {
+        if (window.innerWidth <= 400){
             loadpage.style.display = 'flex'
             let timer = () => {
                 loadpage.style.display = 'flex' ? loadpage.style.display = 'none' : loadpage.style.display = 'flex'
@@ -1634,7 +1635,7 @@
                 wallpaperpage.style.display = 'none'
                 fontspage.style.display = 'none'
             }
-            
+        }
     }
     function navigatetopasswordpage() {
         cover.style.display = 'none'
